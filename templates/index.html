@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Infinity AR One</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  
+  <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top" style="height: 50px;">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+        <h1 class="sitename" style="font-size: 2rem;">INFINITY AR</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Features</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pre-booking" class="prebook-btn">PRE-BOOK NOW!!</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <!-- <img src="assets/img/firstScreen.jpg" alt="" data-aos="fade-out" class="">-->
+      <img src="{{ url_for('static', filename='img/portfolio/screen10.png') }}" alt="" data-aos="fade-out">
+      <section id="heroSection" class="services section light-background">
+        <div class="container">
+          <div class="text-center" data-aos="zoom-out">
+            <h1><br>Infinity AR - ONE VR<br><br></h1><a href="#pre-booking" class="prebook-btn">PRE-BOOK NOW!!</a><br>
+            <p>AR for Everyone<br><br><br></p>
+            
+          </div>
+          <!-- ////removedd -->
+                <div class="container">
+                  <div class="row gy-4 g-10">
+                
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="service-item item-cyan position-relative">
+                        <div class="icon">
+                          <img src="{{ url_for('static', filename='img/features/screen.png') }}" alt="ttt" class="img-fluid">
+                        </div>
+                        <h3>Advanced Display Technology</h3>
+                        <p>Featuring a SONY 0.68" Micro-OLED screen with 4 million pixels and a resolution of 1920×1080, delivering
+                          crystal-clear visuals at 120 Hz refresh rate.</p>
+                      </div>
+                    </div><!-- End Service Item -->
+                
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <div class="service-item item-orange position-relative">
+                        <div class="icon">
+                          <!-- <img src="assets/img/features/location.png" alt="ttt" class="img-fluid">-->
+                          <img src="{{ url_for('static', filename='img/features/location.png') }}" alt="ttt" class="img-fluid">
+                        </div>
+                        <h3>Immersive Viewing Experience</h3>
+                        <p>50° Field of View (FoV) and highest perceived brightness of 600 nits for vivid and immersive visuals.</p>
+                      </div>
+                    </div><!-- End Service Item -->
+                
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                      <div class="service-item item-teal position-relative">
+                        <div class="icon">
+                          <!--<img src="assets/img/features/realworld.png" alt="ttt" class="img-fluid">-->
+                          <img src="{{ url_for('static', filename='img/features/realworld.png') }}" alt="ttt" class="img-fluid">
+                        </div>
+                        <h3>Cutting-Edge Chipset</h3>
+                        <p>Powered by the XREAL X1 chip, ensuring top-tier performance and ultra-low latency of just 3 ms (M2P).</p>
+                      </div>
+                    </div><!-- End Service Item -->
+                
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                      <div class="service-item item-red position-relative">
+                        <div class="icon">
+                          <!--<img src="assets/img/features/communication.png" alt="ttt" class="img-fluid">-->
+                          <img src="{{ url_for('static', filename='img/features/communication.png') }}" alt="ttt" class="img-fluid">
+                        </div>
+                        <h3>Innovative Design</h3>
+                        <p>Lightweight at just 84 g, with adjustable lens transparency (3 modes of electrochromic dimming) and
+                          software-based IPD adjustment for personalized comfort.</p>
+                      </div>
+                    </div><!-- End Service Item -->
+                  </div>
+        </div>
+      </section>
+    </section><!-- /Hero Section -->
+
+      
+    <main class="main">
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About Us<br></h2>
+      <p>"At Infinity AR, we are revolutionizing the future by blending cutting-edge augmented reality with everyday life to empower and inspire people worldwide."</p>
+    </div><!-- End Section Title -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Section 1 -->
+          <div class="col-md-6 mb-5">
+            <div class="about-section p-4 rounded shadow-sm">
+              <h2 class="section-title mb-4">Our Mission</h2>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <div class="icon"><i class="bi bi-lightbulb" style="font-size: 1.5rem;"></i></div>
+                  <p><strong>Innovating Augmented Reality: </strong></p><br><p> We aim to revolutionize how people interact with technology by seamlessly blending the digital and physical worlds.</p>
+                </li>
+                <li class="mb-3">
+                  <div class="icon"><i class="bi bi-building" style="font-size: 1.5rem;"></i></div>
+                  <strong>Accessible AR for Everyone: </strong> Creating lightweight, affordable, and stylish AR glasses that fit effortlessly into everyday life.
+                </li>
+                <li class="mb-3">
+                  <div class="icon"><i class="bi bi-person-check" style="font-size: 1.5rem;"></i></div>
+                  <strong>Enhancing Lives with AR: </strong> Building technology that empowers people to work smarter, play harder, and connect better.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="col-md-6 mb-5">
+            <div class="about-section p-4 rounded shadow-sm">
+              <h2 class="section-title mb-4">Our Journey</h2>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <div class="icon"><i class="bi bi-gear" style="font-size: 1.5rem;"></i></div>
+                  <strong>Redefining AR Glasses: </strong> Transformed bulky, siloed AR devices into sleek, consumer-friendly glasses with world-class technology.
+                </li>
+                <li class="mb-3">
+                  <div class="icon"><i class="bi bi-lightning" style="font-size: 1.5rem;"></i></div>
+                  <strong>Pioneering Innovation: </strong> Engineered our own optical systems for superior image quality and integrated software for seamless device compatibility.
+                </li>
+                <li class="mb-3">
+                  <div class="icon"><i class="bi bi-globe" style="font-size: 1.5rem;"></i></div>
+                  <strong>Global Recognition: </strong> Trusted by developers, investors, and fans worldwide as a leader in consumer AR technology.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="container mt-5">
+        <div class="row gy-4">
+
+          <!-- Section 1 -->
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              At <strong><em>Infinity AR</em>,</strong> we are a passionate team of innovators driven by the limitless possibilities of augmented reality. Like all great tech ventures, our journey began with a shared vision: to revolutionize how people interact with the digital world by seamlessly blending it with the real one.
+            </p>
+            <p>
+              We believe AR is more than just a technology—it’s a transformative force. One day, AR glasses will become an essential, mainstream product that redefines how people work, play, and connect. Our mission is to lead that evolution by creating AR solutions that are accessible, intuitive, and impactful for everyone.
+            </p>
+            <p>
+              Before  <strong><em>Infinity AR</em>,</strong> , augmented reality was often associated with devices that were bulky, expensive, and isolated from the broader tech ecosystem.We set out to change that.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>
+              At <strong><em>Infinity AR</em>,</strong>, we’ve reimagined AR glasses into a lightweight, stylish, and affordable form factor. We engineered proprietary optical systems to deliver stunning visual clarity and developed software that integrates seamlessly with existing devices, making AR technology truly versatile.
+            </p>
+            <p>
+              Since launching our first product, <strong><em>Infinity AR</em>,</strong> has been at the forefront of consumer AR innovation. Our efforts have earned recognition and support from global tech leaders, developers, and a growing community of enthusiastic users. Today, we are proud to be a trailblazer in the AR industry, crafting experiences that inspire and empower people worldwide.
+            </p>
+            <p>
+              As we look ahead, we remain committed to our mission: shaping a future where augmented reality enhances everyday life for all. Together with our fans, partners, and team, <strong><em>Infinity AR</em>,</strong> is building a world where the boundaries between the physical and digital disappear. Welcome to the future with Infinity AR.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+  
+    <section id="stats" class="stats section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+
+          <!-- Stat 1: XREAL X1 Chip -->
+          <div class="col-lg-2 col-md-4">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p>XREAL X1 Chip</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!-- Stat 2: 50° Field of View -->
+          <div class="col-lg-2 col-md-4">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Degree Field of View</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!-- Stat 3: 120 Hz Refresh Rate -->
+          <div class="col-lg-2 col-md-4">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="1" class="purecounter"></span>
+              <p> Hertz Refresh Rate</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!-- Stat 4: 600 Nits Brightness -->
+          <div class="col-lg-2 col-md-4">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="600" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Nits Brightness</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!-- Stat 5: Premium Sound by Bose -->
+          <div class="col-lg-2 col-md-4">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Premium Sound by Bose</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!-- Stat 6: 84g Weight -->
+          <div class="col-lg-2 col-md-4">
+            <div class="stats-item text-center w-100 h-100">
+           </p>   <span data-purecounter-start="0" data-purecounter-end="84" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Gram Weight</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+      </div>
+    </section>
+    <!-- /Stats Section -->
+
+    <!-- About Alt Section PRODUCT DETAILS-->
+    <section id="about-alt" class="about-alt section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <!-- Left Image with Play Button -->
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+<!--            <img src="assets/img/logo_3000.png" class="img-fluid" alt="Infinity AR Glasses">-->
+            <img src="{{ url_for('static', filename='img/logo_3000.png') }}" class="img-fluid" alt="Infinity AR Glasses">
+<!--            <a href="assets/img/character.mp4" class="glightbox pulsating-play-btn"></a>-->
+            <a href="{{ url_for('static', filename='img/character.mp4') }}" class="glightbox pulsating-play-btn" ></a>
+          </div>
+          <!-- Right Content -->
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3><br><br><brs>Revolutionizing Augmented Reality - Infinity AR</h3>
+            <p class="fst-italic">
+              Infinity AR is designed to bring the future of augmented reality to your fingertips. Experience AR like never before with cutting-edge technology and sleek, comfortable design.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Lightweight and stylish design for everyday use.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Powered by the advanced XREAL X1 chip for smooth performance.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>50° field of view and 600 nits brightness for an immersive experience.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>120 Hz refresh rate for fluid and responsive visuals.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Premium sound system powered by Bose for an enhanced auditory experience.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Adjustable lens transparency with electrochromic dimming modes.</span></li>
+            </ul>
+            <p>
+              With Infinity AR, we’re pushing the boundaries of what’s possible with augmented reality. Whether you’re at work, play, or anywhere in between, Infinity AR brings the digital world to life in the most natural way. Join us on this journey to transform how we interact with technology.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Investor-->
+    <section id="clients" class="clients section light-background">
+      <div class="container" data-aos="fade-up">
+        <!-- Title Section -->
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>Investors</h2>
+        </div>
+
+        <!-- Logos Section -->
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-2 g-md-3" style="margin: 0%;"> <!-- Use custom grid classes with reduced spacing -->
+  <div class="col client-logo">
+    <img src="{{ url_for('static', filename='img/clients/client-1.png') }}" class="img-fluid" alt="">
+  </div><!-- End Client Item -->
+
+  <div class="col client-logo">
+    <img src="{{ url_for('static', filename='img/clients/client-2.png') }}" class="img-fluid" alt="">
+  </div><!-- End Client Item -->
+
+  <div class="col client-logo">
+    <img src="{{ url_for('static', filename='img/clients/client-3.png') }}" class="img-fluid" alt="">
+  </div><!-- End Client Item -->
+
+  <div class="col client-logo">
+    <img src="{{ url_for('static', filename='img/clients/client-4.png') }}" class="img-fluid" alt="">
+  </div><!-- End Client Item -->
+
+  <div class="col client-logo">
+    <img src="{{ url_for('static', filename='img/clients/client-5.png') }}" class="img-fluid" alt="">
+  </div><!-- End Client Item -->
+
+  <div class="col client-logo">
+    <img src="{{ url_for('static', filename='img/clients/client-6.png') }}" class="img-fluid" alt="">
+  </div><!-- End Client Item -->
+</div>
+
+      </div>
+    </section>
+     <!-- /Investor-->
+
+     <!-- Features Section -->
+     <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Infinity AR Features</h2>
+        <p>Explore the cutting-edge features that Infinity AR offers to enhance your digital experiences.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 g-10">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/screen.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/screen.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>Full-Screen Immersion</h3>
+              <p>Experience complete immersion with a full-screen AR interface that enhances engagement.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/location.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/location.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>Location-Based AR</h3>
+              <p>Utilize GPS data for interactive, location-based AR experiences that are personalized and dynamic.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <div class="icon">
+                <a href="https://www.flaticon.com/free-icons/vr-glasses" title="vr glasses icons"></a>
+                <!-- <img src="assets/img/features/realworld.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/realworld.png') }}" alt="ttt" class="img-fluid">
+
+              </div>
+                <h3>Real-World Integration</h3>
+              <p>Integrate digital objects seamlessly into the real world, enhancing visual experiences with precision.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/communication.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/communication.png') }}" alt="ttt" class="img-fluid">
+                
+              </div>
+                <h3>Interactive Communication</h3>
+              <p>Communicate through interactive AR elements like real-time chat and virtual assistance.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/setting.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/setting.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>Customizable Settings</h3>
+              <p>Adjust settings to suit personal preferences, from visual styles to interaction modes.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/gesture.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/gesture.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>Gesture Control</h3>
+              <p>Control AR experiences with intuitive gestures, enhancing accessibility and ease of use.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-item item-purple position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/storage.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/storage.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>3D Object Storage</h3>
+              <p>Store and access 3D models or AR assets for future use, enhancing long-term engagement.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-item item-blue position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/share.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/share.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>Sharing Capabilities</h3>
+              <p>Share AR experiences directly with friends or social media platforms for wider interaction.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon">
+                <!-- <img src="assets/img/features/friend.png" alt="ttt" class="img-fluid"> -->
+                <img src="{{ url_for('static', filename='img/features/friend.png') }}" alt="ttt" class="img-fluid">
+              </div>
+                <h3>User-Friendly Interface</h3>
+              <p>The app is designed with simplicity in mind, offering an intuitive interface that ensures easy navigation and an accessible experience for all users, from beginners to advanced AR enthusiasts.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Pre-Booking Section -->
+    <section id="pre-booking" class="pre-booking section accent-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pre-Book Infinity AR - One VR</h2>
+        <p>Don’t miss out on the future of augmented reality! Pre-book your spot today and be the first to experience the Infinity AR.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Pre-Booking Form -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="pre-booking-item item-cyan position-relative">
+              <h3>Secure Your Access</h3>
+              <p>Fill out the simple form below to pre-book your experience with Infinity AR. It's quick, easy, and free!</p>
+              <form id="paymentForm" method="POST" style="align-items: center;">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control"  name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="text" class="form-control"  name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <button type="button" id="payButton" class="btn" style="background-color: black; color: #fff;">Pre-Book Now</button>
+                <div class="price-label">
+                  <span>Only at ₹1999</span>
+                </div>
+              </form>
+            </div>
+          </div><!-- End Pre-Booking Form -->
+
+          <!-- Info Section -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="pre-booking-item item-teal position-relative">
+              <h3>Why Should You Pre-Book?<br></h3>
+              <ul style="color: #fff;">
+                <li>Be one of the first to explore the cutting-edge Infinity AR experience.</li>
+                <li>Get exclusive early access to new features and updates.</li>
+                <li>Receive notifications about special events and promotions.</li>
+                <li>Join a growing community of AR enthusiasts and innovators.</li>
+              </ul>
+              <!-- Image -->
+              <!-- <img src="assets/img/prebook.png" alt="Infinity AR Preview" class="img-fluid mt-4" /> -->
+              <img src="{{ url_for('static', filename='img/prebook.png') }}" alt="Infinity AR Preview" class="img-fluid mt-4" >
+            </div>
+          </div><!-- End Info Section -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Pre-Booking Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="50">
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{{ url_for('static', filename='img/portfolio/Screen1.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/Screen1.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/glare1.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare1.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{{ url_for('static', filename='img/portfolio/screen2.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen2.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{{ url_for('static', filename='img/portfolio/glare2.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare2.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/screen3.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen3.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/glare11.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare11.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{{ url_for('static', filename='img/portfolio/glare3.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare3.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{{ url_for('static', filename='img/portfolio/screen4.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen4.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/glare4.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare4.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/glare5.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare5.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{{ url_for('static', filename='img/portfolio/screen5.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen5.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/glare6.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare6.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/screen6.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen6.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/glare12.png') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/glare12.png') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/screen7.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen7.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{ url_for('static', filename='img/portfolio/screen8.webp') }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <a href="{{ url_for('static', filename='img/portfolio/screen8.webp') }}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+        
+          </div><!-- End Portfolio Container -->
+        
+        </div>
+        
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to the most common questions about Infinity AR and our innovative augmented reality solutions.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <!-- Faq Item 1 -->
+              <div class="faq-item faq-active">
+                <h3>What is Infinity AR and what do you offer?</h3>
+                <div class="faq-content">
+                  <p>Infinity AR is a leading innovator in augmented reality technology. We specialize in designing cutting-edge AR glasses and software that seamlessly integrate digital content with the real world. Our products enhance both professional and personal experiences, making augmented reality accessible for everyone.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <!-- Faq Item 2 -->
+              <div class="faq-item">
+                <h3>What makes Infinity AR glasses different from other AR devices?</h3>
+                <div class="faq-content">
+                  <p>Our AR glasses are lightweight, stylish, and designed to be user-friendly. Unlike bulky AR devices, Infinity AR glasses offer a sleek, comfortable fit while maintaining high-quality visuals. We have developed proprietary optical technology and integrated them with mobile apps, making AR experiences more versatile and accessible.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <!-- Faq Item 3 -->
+              <div class="faq-item">
+                <h3>How do Infinity AR glasses connect to mobile devices?</h3>
+                <div class="faq-content">
+                  <p>Our glasses connect seamlessly with your mobile device via Bluetooth. This allows you to access AR applications and content directly from your smartphone or tablet. Whether you're browsing through immersive media or using AR for work, everything is easily accessible and synchronized.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <!-- Faq Item 4 -->
+              <div class="faq-item">
+                <h3>What are the main features of Infinity AR glasses?</h3>
+                <div class="faq-content">
+                  <p>Infinity AR glasses come with a range of innovative features including high-definition augmented reality displays, a lightweight frame, long-lasting battery life, and seamless connectivity to both iOS and Android devices. Our proprietary software makes it easy to interact with and experience AR content like never before.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <!-- Faq Item 5 -->
+              <div class="faq-item">
+                <h3>Are Infinity AR products suitable for business use?</h3>
+                <div class="faq-content">
+                  <p>Absolutely! Infinity AR's solutions are designed to meet the needs of both consumers and businesses. Whether you're in retail, education, healthcare, or industrial sectors, our AR glasses can be used for training, design, interactive customer experiences, and much more. We offer customizable solutions to cater to business-specific requirements.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <!-- Faq Item 6 -->
+              <div class="faq-item">
+                <h3>How can I get support for my Infinity AR device?</h3>
+                <div class="faq-content">
+                  <p>We offer comprehensive customer support through our website, where you can find troubleshooting guides, FAQs, and contact our support team for personalized assistance. Our support team is available via email or phone to help resolve any technical issues you may encounter.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Pre-Booking Section -->
+    <section id="pre-booking" class="pre-booking section accent-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pre-Book Infinity AR - One VR</h2>
+        <p>Don’t miss out on the future of augmented reality! Pre-book your spot today and be the first to experience the Infinity AR.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- Pre-Booking Form -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="pre-booking-item item-cyan position-relative">
+              <h3>Secure Your Access</h3>
+              <p>Fill out the simple form below to pre-book your experience with Infinity AR - One VR. It's quick, easy, and free!</p>
+              <form id="paymentForm" method="POST" style="align-items: center;">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control"  name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="text" class="form-control"  name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <button type="button" id="payButton" class="btn" style="background-color: black; color: #fff;">Pre-Book Now</button>
+                <div class="price-label">
+                  <span>Only at ₹1999</span>
+                </div>
+              </form>
+              
+            </div>
+          </div><!-- End Pre-Booking Form -->
+
+          <!-- Info Section -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="pre-booking-item item-teal position-relative">
+              <h3>Why Should You Pre-Book?<br></h3>
+              <ul style="color: #fff;">
+                <li>Be one of the first to explore the cutting-edge Infinity AR experience.</li>
+                <li>Get exclusive early access to new features and updates.</li>
+                <li>Receive notifications about special events and promotions.</li>
+                <li>Join a growing community of AR enthusiasts and innovators.</li>
+              </ul>
+              <!-- Image -->
+              <!-- <img src="assets/img/prebook.png" alt="Infinity AR Preview" class="img-fluid mt-4" /> -->
+              <img src="{{ url_for('static', filename='img/prebook.png') }}" class="img-fluid mt-4" alt="">
+
+            </div>
+          </div><!-- End Info Section -->
+
+        </div>
+
+      </div>
+
+    </section><!-- End Pre-Booking Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- About Section -->
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Infinity AR</span>
+          </a>
+          <p>At Infinity AR, we’re shaping the future of augmented reality with innovative, consumer-friendly solutions. Our mission is to make AR accessible, intuitive, and transformative for everyone.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://twitter.com/infinityar"><i class="bi bi-twitter"></i></a>
+            <a href="https://facebook.com/infinityar"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/infinityar"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com/company/infinityar"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Useful Links Section -->
+        <div class="col-lg-4 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Services Section -->
+        <!-- <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="#">Infinity AR Glasses</a></li>
+            <li><a href="#">AR Software Solutions</a></li>
+            <li><a href="#">Product Customization</a></li>
+            <li><a href="#">Tech Support</a></li>
+            <li><a href="#">App Integration</a></li>
+          </ul>
+        </div> -->
+
+        <!-- Contact Us Section -->
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Infinity AR Headquarters</p>
+          <p>Delhi 110001</p>
+          <p>India</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 800 123 4567</span></p>
+          <p><strong>Email:</strong> <span>info@infinityar.in</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Infinity AR</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by Vishal Kataria
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+<!--  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!--  <script src="assets/vendor/php-email-form/validate.js"></script>-->
+<!--  <script src="assets/vendor/aos/aos.js"></script>-->
+<!--  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>-->
+<!--  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>-->
+<!--  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>-->
+<!--  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>-->
+<!--  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>-->
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <!-- payment script -->
+  <script>
+    const paymentForm = document.getElementById('paymentForm');
+    const payButton = document.getElementById('payButton');
+
+    payButton.addEventListener('click', async () => {
+        const formData = new FormData(paymentForm);
+        
+        // Send form data to the Flask server
+        const response = await fetch('/charge', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            alert("Error: " + data.error);
+            return;
+        }
+
+        // Configure Razorpay Checkout
+        const options = {
+            key: data.key_id,
+            amount: data.amount,
+            currency: "INR",
+            name: data.name,
+            description: "Test Payment",
+            order_id: data.order_id,
+            prefill: {
+                name: data.name,
+                email: data.email,
+                contact: data.phone
+            },
+            handler:function (response) {
+              const order_id = response.razorpay_order_id;
+              const payment_id= response.razorpay_payment_id;
+              const name= data.name;
+              const email= data.email;
+              const phone= data.phone;
+              window.location.href = `/success?order_id=${order_id}&payment_id=${payment_id}&name=${name}&email=${email}&phone=${phone}`;
+                // Send payment details and user data to the Flask success endpoint
+                
+            }
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+    });
+</script>
+</body>
+
+</html>
